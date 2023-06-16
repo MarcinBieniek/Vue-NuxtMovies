@@ -1,14 +1,12 @@
 <script setup>
-import userId from '../teams/[teamSlug]/users/[userId].vue';
-
-  const route = useRoute();
-  const message = computed(() => {
-    `I'm on a team ${route.params.teamSlug} and my id is ${route.params.userId}`
+  const route = useRoute()
+  const { data } = useAsyncData(() => {
+    return $fetch(`http://www.omdbapi.com/?apikey=8e3f600b&i=${route.params.id}`)
   })
 </script>
 
 <template>
   <div>
-    <h1>{{ message }}</h1>
+    <h1>{{ data }}</h1>
   </div>
 </template>
