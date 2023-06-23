@@ -1,5 +1,8 @@
 <script setup>
-  const isLoggedIn = userIsLoggedIn();
+
+  import { useUser } from '~/stores/user';
+  const user = useUser()
+
 </script>
 
 <template>
@@ -7,8 +10,8 @@
     <NuxtLink to="/">Home</NuxtLink>
     <NuxtLink to="/movies">Movies</NuxtLink>
     <NuxtLink to="https://www.pzpn.pl">PZPN</NuxtLink>
-    <NuxtLink v-if="!isLoggedIn" to="/login">Login</NuxtLink>
-    <a href="#" v-else @click.prevent="isLoggedIn = false">Logout</a>
+    <NuxtLink v-if="!user.isLoggedIn" to="/login">Login</NuxtLink>
+    <a href="#" v-else @click.prevent="user.isLoggedIn = false">Logout</a>
   </nav>
   <slot></slot>
 </template>

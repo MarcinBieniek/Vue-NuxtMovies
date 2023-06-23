@@ -1,22 +1,16 @@
 <script setup>
 
-  const isLoggedIn = userIsLoggedIn()
+  import { useUser } from '~/stores/user';
+  const user = useUser()
 
   definePageMeta({
     layout: "plain"
   })
 
-  function login(){
-    isLoggedIn.value = true
-    useRouter().push("/")
-  }
-
-  console.log(isLoggedIn)
-
 </script>
 
 <template>
-  <form @submit.prevent="login">
+  <form @submit.prevent="user.login">
     <h1>Login</h1>
     <label>
       Username
