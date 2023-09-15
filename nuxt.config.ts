@@ -8,6 +8,9 @@ export default defineNuxtConfig({
       },
     ],
   ],
+  css: [
+    '@/assets/css/main.css',
+  ],
   imports: {
     dirs: ["stores"]
   },
@@ -15,8 +18,14 @@ export default defineNuxtConfig({
     pinia: "/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs"
   },
   routeRules: {
-    "/spa": { ssr: false }, 
+    "/spa": { ssr: false },
     "/static": { static: true },
     "/swr": { swr: true }
+  },
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
   }
 })
