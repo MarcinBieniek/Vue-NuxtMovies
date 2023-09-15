@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     pinia: "/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs"
   },
   routeRules: {
-    "/spa": { ssr: false },
+    "/spa": { ssr: false }, 
     "/static": { static: true },
     "/swr": { swr: true }
   }
