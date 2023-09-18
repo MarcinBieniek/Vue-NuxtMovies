@@ -6,12 +6,19 @@
 </script>
 
 <template>
-  <nav style="display: flex; gap: 10px">
-    <NuxtLink class="text-3xl font-bold underline" to="/">Home</NuxtLink>
-    <NuxtLink to="/movies">Movies</NuxtLink>
-    <NuxtLink to="/favorite">Favorite</NuxtLink>
-    <NuxtLink v-if="!user.isLoggedIn" to="/login">Login</NuxtLink>
-    <a href="#" v-else @click.prevent="user.isLoggedIn = false">Logout</a>
-  </nav>
-  <slot></slot>
+  <div class="container mx-auto ">
+    <nav class="h-[150px] flex justify-between place-items-center">
+      <div class="flex justify-between place-items-center gap-5">
+        <img src="../assets/icons/camera2.svg" class="h-[55px]"/>
+        <h1 class="text-[24px]"><span class="text-blue">your</span>Movie</h1>
+      </div>
+      <div class="flex justify-between place-items-center gap-5">
+        <NuxtLink to="/" class="hover:text-blue transition delay-150 text-[22px]" >Search</NuxtLink>
+        <NuxtLink to="/favorite" class="hover:text-blue transition delay-150 text-[22px]">Favorite</NuxtLink>
+        <NuxtLink v-if="!user.isLoggedIn" to="/login" class="hover:text-blue transition delay-150 text-[22px]">Login</NuxtLink>
+        <NuxtLink v-else to="/" @click.prevent="user.isLoggedIn = false">Logout</NuxtLink>
+      </div>
+    </nav>
+    <slot></slot>
+  </div>
 </template>

@@ -8,7 +8,13 @@ module.exports = {
     "./nuxt.config.{js,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'background': '#f5f5f5',
+        'blue': '#379de7',
+        'green': '#5ac135',
+      }
+    },
   },
   plugins: [],
 }
