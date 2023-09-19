@@ -6,7 +6,7 @@
 </script>
 
 <template>
-  <div class="container mx-auto sm:px-5">
+  <div class="container mx-auto sm:px-5 mb-[100px]">
     <nav class="h-[150px] flex md:justify-between place-items-center flex-col md:flex-row">
       <NuxtLink to="/" class="flex justify-between place-items-center gap-5 mt-5 md:mt-0">
         <img src="../assets/icons/camera2.svg" class="h-[55px]"/>
