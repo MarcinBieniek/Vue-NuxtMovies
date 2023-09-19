@@ -20,7 +20,7 @@
     <form class="flex justify-center  mb-[50px] " @submit.prevent="search">
       <div>
         <input class="p-3 text-blue border-gray border-[1px] md:w-[400px] sm:w-[350px]" placeholder="Type movie name" v-model="query"/>
-        <button>
+        <button class="h-full">
           <img src="../assets/icons/search.svg" class="h-[25px] ml-2" />
         </button>
       </div>

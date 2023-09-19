@@ -1,14 +1,14 @@
 <script setup>
   import { useFavorite } from "../stores/favorite";
   const  favoriteStore = useFavorite();
-
-  console.log('fav', favoriteStore.items)
-
 </script>
 
 <template>
 
-  <h1 class="text-[24px] mb-[50px]">Your favourite movies</h1>
+  <h1 class="text-[24px] mb-[10px]">Your favourite movies</h1>
+
+  <p v-if="favoriteStore.items.length === 0" class="text-[24px] mb-[10px]">List is empty, search for favorite movies!</p>
+  <p v-else class="text-[24px] mb-[10px]">Number of favorite movies: {{ favoriteStore.items.length }}</p>
 
   <ul class="relative grid place-items-center 2xl:grid-cols-5 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4">
       <li v-for="(movie, index) in favoriteStore.items" :key="index" class="relative" >
