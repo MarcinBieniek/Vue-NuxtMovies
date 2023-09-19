@@ -1,42 +1,28 @@
-# Nuxt 3 Minimal Starter
+## Description
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Movie data base using omdbapi (free movie db api). Project made to practise Vue Nuxt 3 features: api data agregation, Pinia state, TypeScript, different layouts, simple login & auth system, composables, middleware, meta & head tags, props, tailwind.
 
-## Setup
+## Demo
 
-Make sure to install the dependencies:
+Live demo: [https://jovial-centaur-df632a.netlify.app](https://jovial-centaur-df632a.netlify.app)
 
-```bash
-# yarn
-yarn install
+Thank you for taking your time and checking out my project.
 
-# npm
-npm install
-
-# pnpm
-pnpm install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`
+## Running the app
 
 ```bash
-npm run dev
+# development
+$ npm run dev
+
+# build
+$ npm run buil
+
+# preview
+$ npm run preview
 ```
 
-## Production
+## Stay in touch
 
-Build the application for production:
+Author - [Marcin Bieniek](https://www.linkedin.com/in/marcin-bieniek-617565271/)
 
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Portfolio - [marcindev.netlify.app](https://marcindev.netlify.app/)
