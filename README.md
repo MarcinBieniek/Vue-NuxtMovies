@@ -4,7 +4,7 @@ Movie data base using omdbapi (free movie db api). Project made to practise Vue 
 
 ## Demo
 
-Live demo: [https://jovial-centaur-df632a.netlify.app](https://jovial-centaur-df632a.netlify.app)
+Live demo: [https://rad-dragon-e353b9.netlify.app/](https://rad-dragon-e353b9.netlify.app/)
 
 Thank you for taking your time and checking out my project.
 
