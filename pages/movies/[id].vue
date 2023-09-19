@@ -4,7 +4,7 @@
 
   const { data } = await useFetch(
     `https://www.omdbapi.com/?apikey=8e3f600b&i=${route.params.id}`,
-    { pick: ["Plot", "Title", "Error", "Poster"],
+    { pick: ["Plot", "Title", "Error", "Poster", "Year"],
       key: `/movies/${route.params.id}`,
     }
   );
@@ -27,6 +27,14 @@
 
 <template>
   <div>
-    <h1>{{ data }}</h1>
+
+  </div>
+  <div class="flex bg-white">
+    <img :src="data.Poster" alt="Movie Poster" />
+    <div class="p-10">
+      <h1 class="text-[28px] font-bold">{{ data.Title }}</h1>
+      <p class="my-5">{{ data.Plot }}</p>
+      <p>Air date: {{ data.Year }}</p>
+    </div>
   </div>
 </template>

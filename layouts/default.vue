@@ -29,4 +29,5 @@
     </nav>
     <slot></slot>
   </div>
+
 </template>

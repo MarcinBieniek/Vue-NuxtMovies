@@ -26,11 +26,8 @@
       </div>
     </form>
 
-
-
     <ul class="relative grid place-items-center 2xl:grid-cols-5 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4">
       <li v-for="movie in movies" class="relative" :key="movie.imdbID">
-
           <img :src="movie.Poster" :alt="movie.title" class="h-[400px]"/>
           <div class="absolute top-0 h-full w-full group hover:bg-white">
             <div class="absolute hidden group-hover:block w-full ">
@@ -43,7 +40,6 @@
               </div>
             </div>
           </div>
-
       </li>
     </ul>
 
